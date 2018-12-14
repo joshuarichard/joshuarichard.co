@@ -1,0 +1,47 @@
+@import '../partials/variables';
+
+#root {
+  background-color: $sticky_pink;
+  position: absolute;
+  top: 0px; /* Header Height */
+  bottom: 0px; /* Footer Height */
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.App {
+  font-family: $main_font;
+}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: $bar_height;
+}
+
+#sticky-jumbo {
+  font-family: $header_font;
+  text-align: center;
+  background-color: $sticky_pink
+}
+
+/*
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  font-family: $header_font;
+}
+*/
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
