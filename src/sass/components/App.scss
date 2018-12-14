@@ -36,7 +36,6 @@ body {
   font-size: 10rem;
   font-weight: 700;
   color: white;
-  border-bottom: solid;
 }
 
 .menu-text {
@@ -46,18 +45,31 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: white;
 }
 
 .resume-text {
-  margin: 1rem auto 0;
+  margin: 1rem auto 1rem auto;
 }
 
 .github-text {
-  margin: 1rem auto 0;
+  margin: 1rem auto 1rem auto;
 }
 
 .linkedin-text {
+  margin: 1rem auto 1rem auto;
+}
+
+.contact-text {
+  font-family: $main_font;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
   margin: 1rem auto 0;
+  display: flex;
+  justify-content: center;
 }
 
 a:link, a:visited {
@@ -65,5 +77,17 @@ a:link, a:visited {
 }
 
 a:hover, a:visited:hover {
+  color: #ffffff;
+}
+
+a[href^="mailto:"] {
+  color: #dddddd;
+}
+
+a:active {
+  color: black;
+}
+
+a[href^="mailto:"]:hover {
   color: #ffffff;
 }

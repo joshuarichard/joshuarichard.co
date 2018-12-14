@@ -17,9 +17,7 @@ class App extends Component {
       <div className='app-container'>
           <div className='center-box'>
               <div className='josh-text'>
-                  <text>
-                      joshua richard
-                  </text>
+                  <text> joshua richard </text>
               </div>
               <div>
                 <div className='menu-text'>
@@ -31,6 +29,11 @@ class App extends Component {
                   </div>
                   <div className='linkedin-text'>
                     <a href='https://linkedin.com/in/joshuajrichard' target="_blank">linkedin</a>
+                  </div>
+                </div>
+                <div className='contact-text'>
+                  <div className='name-text'>
+                    <a href="mailto:me@joshuarichard.co"> me@joshuarichard.co </a>
                   </div>
                 </div>
               </div>
