@@ -13,11 +13,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "set HTTPS=true&&react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/components:./src/css/components",
-    "deploy": "react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
+    "deploy": "set HTTPS=true&&react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",

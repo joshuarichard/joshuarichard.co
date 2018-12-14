@@ -65,16 +65,13 @@ body {
   justify-content: center; }
 
 a:link, a:visited {
-  color: #dddddd; }
+  color: #ffffff; }
 
 a:hover, a:visited:hover {
   color: #ffffff; }
 
 a[href^="mailto:"] {
-  color: #dddddd; }
-
-a:active {
-  color: black; }
+  color: #ffffff; }
 
 a[href^="mailto:"]:hover {
   color: #ffffff; }
