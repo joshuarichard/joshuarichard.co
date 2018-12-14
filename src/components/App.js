@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Button } from 'react-bootstrap'
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import '../css/components/App.css'
 
 import '../css/components/App.css'
 
 class App extends Component {
 
-  constructor(props ) {
+  constructor(props) {
     super(props)
   }
 
@@ -22,26 +22,27 @@ class App extends Component {
                   </text>
               </div>
               <div>
-                  <BrowserRouter>
-                    <div className='menu-text'>
-                      <a className='resume-text' href={'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf'}>
-                          resume
-                      </a>
-                      <div className='github-text'>
-                        <Link to="/github">github</Link>
-                      </div>
-                      <div className='linkedin-text'>
-                        <Link to="/linkedin">linkedin</Link>
-                      </div>
-                      <Route path='/github' component={() => window.location = 'https://www.github.com/joshuarichard'}/>
-                      <Route path='/linkedin' component={() => window.location = 'https://www.linkedin.com/in/joshuajrichard'}/>
-                    </div>
-                  </BrowserRouter>
+                <div className='menu-text'>
+                  <a className='resume-text' href='https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf'>
+                      resume
+                  </a>
+                  <div className='github-text'>
+                    <a href='https://github.com/joshuarichard' target="_blank">github</a>
+                  </div>
+                  <div className='linkedin-text'>
+                    <a href='https://linkedin.com/in/joshuajrichard' target="_blank">linkedin</a>
+                  </div>
+                </div>
               </div>
           </div>
       </div>
     )
   }
 }
+
+/*
+<Route path='/github' component={() => window.location = 'https://github.com/joshuarichard'}/>
+<Route path='/linkedin' component={() => window.location = 'https://linkedin.com/in/joshuajrichard'}/>
+*/
 
 export default App
