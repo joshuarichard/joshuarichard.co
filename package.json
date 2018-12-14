@@ -1,5 +1,5 @@
 {
-  "name": "sticky",
+  "name": "joshuarichard.co",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,10 +8,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
-    "react-scripts": "1.0.10",
-    "redux": "^3.7.2",
-    "redux-persist": "^4.8.3"
+    "react-scripts": "1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",

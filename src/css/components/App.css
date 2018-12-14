@@ -1,5 +1,9 @@
-@import '../partials/variables';
-
+/* colors */
+/* nav bar colors */
+/* heights */
+/* paddings */
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:100");
 #root {
   height: 100%;
 }
@@ -17,7 +21,6 @@ body {
   display: flex;
   height: 100%;
   justify-content: center;
-
   /* royal - very strong candidate */
   background: linear-gradient(to top, #141e30, #243b55);
 }
@@ -29,14 +32,14 @@ body {
 }
 
 .josh-text {
-  font-family: $main_font;
+  font-family: "Lato", sans-serif;
   font-size: 50px;
   font-weight: 100;
   color: white;
 }
 
 .menu-text {
-  font-family: $main_font;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: 100;
   display: flex;
@@ -63,3 +66,5 @@ a:visited {
 a:hover, a:visited:hover {
   color: #ffffff;
 }
+
+/*# sourceMappingURL=App.css.map */
