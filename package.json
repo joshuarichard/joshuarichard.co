@@ -16,7 +16,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/components:./src/css/components",
-    "deploy": "react-scripts build && aws --profile josh_personal s3 sync build/ s3://sticky-deployment"
+    "deploy": "react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",

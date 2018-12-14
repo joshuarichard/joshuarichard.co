@@ -17,19 +17,23 @@ class App extends Component {
           <div className='center-box'>
               <div className='josh-text'>
                   <text>
-                      joshua richard.
+                      joshua richard
                   </text>
               </div>
               <div className='menu-text'>
                   <a className='resume-text' href={'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf'}>
                       resume
                   </a>
-                  <a className='github-text' href={'https://github.com/joshuarichard'}>
+                  <div className='github-text'>
+                    <a href={'https://www.github.com/joshuarichard'}>
                       github
-                  </a>
-                  <a className='linkedin-text' href={'https://www.linkedin.com/in/joshuajrichard/'}>
+                    </a>
+                  </div>
+                  <div className='linkedin-text'>
+                    <a href={'https://www.linkedin.com/in/joshuajrichard/'}>
                       linkedIn
-                  </a>
+                    </a>
+                  </div>
               </div>
           </div>
       </div>
