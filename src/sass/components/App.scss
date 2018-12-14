@@ -19,7 +19,10 @@ body {
   justify-content: center;
 
   /* royal - very strong candidate */
-  background: linear-gradient(to top, #141e30, #243b55);
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to right, #243B55, #141E30);
+
 }
 
 .center-box {

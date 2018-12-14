@@ -3,7 +3,7 @@
 /* heights */
 /* paddings */
 /* fonts */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
 #root {
   height: 100%; }
 
@@ -19,7 +19,10 @@ body {
   height: 100%;
   justify-content: center;
   /* royal - very strong candidate */
-  background: linear-gradient(to top, #141e30, #243b55); }
+  background: #141E30;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243B55, #141E30);
+  background: linear-gradient(to right, #243B55, #141E30); }
 
 .center-box {
   width: auto;
