@@ -7,7 +7,6 @@ import '../../css/components/box/Box.css'
 const Box = () => (
   <div className='box-container'>
     <Content/>
-    <Face/>
   </div>
 )
 
