@@ -1,0 +1,19 @@
+/* colors */
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+.contact-text {
+  font-family: "Lato", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: center; }
+
+a[href^="mailto:"] {
+  color: #ffffff; }
+
+a[href^="mailto:"]:hover {
+  color: #ffffff; }
+
+/*# sourceMappingURL=Contact.css.map */

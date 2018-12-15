@@ -1,0 +1,19 @@
+@import '../partials/variables';
+
+.contact-text {
+  font-family: $main_font;
+  font-size: 3rem;
+  font-weight: 300;
+  color: $text_color;
+  margin: 1rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+a[href^="mailto:"] {
+  color: $link_color;
+}
+
+a[href^="mailto:"]:hover {
+  color: $link_color;
+}

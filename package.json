@@ -8,16 +8,16 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.3.1",
+    "react-ga": "^2.5.6",
     "react-scripts": "1.0.10"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set HTTPS=true&&react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/components:./src/css/components",
-    "deploy": "set HTTPS=true&&react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
+    "deploy": "react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
   },
   "devDependencies": {
     "node-sass": "^4.5.3",

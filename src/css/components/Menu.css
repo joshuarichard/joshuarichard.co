@@ -1,0 +1,30 @@
+/* colors */
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+.menu-text {
+  font-family: "Lato", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: solid;
+  border-bottom: solid;
+  border-color: #ffffff; }
+
+.resume-text {
+  margin: 1rem auto 1rem auto; }
+
+.github-text {
+  margin: 1rem auto 1rem auto; }
+
+.linkedin-text {
+  margin: 1rem auto 1rem auto; }
+
+a:link, a:visited {
+  color: #ffffff; }
+
+a:hover, a:visited:hover {
+  color: #ffffff; }
+
+/*# sourceMappingURL=Menu.css.map */
