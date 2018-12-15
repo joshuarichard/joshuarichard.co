@@ -1,0 +1,11 @@
+@import '../partials/variables';
+
+.box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+}

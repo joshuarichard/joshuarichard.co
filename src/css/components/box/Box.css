@@ -1,9 +1,13 @@
 /* colors */
 /* fonts */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,700");
-.center-box {
+.box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: auto;
   height: auto;
-  margin: auto; }
+  margin: auto;
+  padding: 10px; }
 
 /*# sourceMappingURL=Box.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;AAIZ,WAAW;AACH,mEAA2D;ACHnE,iBAAkB;EAChB,WAAW,EDGD,kBAAkB;ECF5B,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,GAAG;EAChB,KAAK,EDJM,OAAO",
+"sources": ["../../../../sass/partials/_variables.scss","../../../../sass/components/box/content/Joshua.scss"],
+"names": [],
+"file": "Joshua.css"
+}

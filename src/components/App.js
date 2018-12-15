@@ -8,11 +8,6 @@ ReactGA.initialize('UA-131070858-1')
 ReactGA.pageview('/home')
 
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <div className='app-container'>
@@ -20,7 +15,6 @@ class App extends Component {
       </div>
     )
   }
-
 }
 
 export default App

@@ -1,17 +1,13 @@
 import React from 'react'
-import Menu from './Menu'
-import Contact from './Contact'
-import Header from './Header'
+import Face from './Face'
+import Content from './content/Content'
 
-import '../../css/components/Box.css'
+import '../../css/components/box/Box.css'
 
 const Box = () => (
-  <div className='center-box'>
-      <Header/>
-      <div>
-        <Menu/>
-        <Contact/>
-      </div>
+  <div className='box-container'>
+    <Content/>
+    <Face/>
   </div>
 )
 

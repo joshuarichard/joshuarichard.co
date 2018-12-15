@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,YAAY;AAIZ,WAAW;AACH,mEAA2D;ACHnE,eAAgB;EACd,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;;AAGrB,UAAW;EACT,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK",
+"sources": ["../../../sass/partials/_variables.scss","../../../sass/components/box/Face.scss"],
+"names": [],
+"file": "Face.css"
+}

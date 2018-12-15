@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,YAAY;AAIZ,WAAW;AACH,mEAA2D;ACHnE,UAAW;EACT,WAAW,EDGD,kBAAkB;ECF5B,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,GAAG;EAChB,KAAK,EDJM,OAAO",
-"sources": ["../../sass/partials/_variables.scss","../../sass/components/Header.scss"],
-"names": [],
-"file": "Header.css"
-}
