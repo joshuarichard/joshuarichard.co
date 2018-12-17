@@ -24,4 +24,9 @@ body {
   background: linear-gradient(to right, #243B55, #141E30);
 }
 
+a, a:link, a:visited, a:hover, a:active, a:visited:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=App.css.map */

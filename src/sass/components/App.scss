@@ -23,3 +23,8 @@ body {
   background: -webkit-linear-gradient(to right, #243B55, #141E30);
   background: linear-gradient(to right, #243B55, #141E30);
 }
+
+a, a:link, a:visited, a:hover, a:active, a:visited:hover {
+  color: $link_color !important;
+  text-decoration: none;
+}
