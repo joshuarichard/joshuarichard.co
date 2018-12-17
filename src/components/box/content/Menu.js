@@ -5,6 +5,7 @@ import '../../../css/components/Menu.css'
 let ru = 'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf'
 let gu = 'https://github.com/joshuarichard'
 let lu = 'https://linkedin.com/in/joshuajrichard'
+let au = 'https://angel.co/joshuarichard'
 
 const Menu = () => (
   <div className='menu-container'>
@@ -29,6 +30,14 @@ const Menu = () => (
          rel='noreferrer noopener'
       >
         linkedin
+      </a>
+    </div>
+    <div className='angel-text'>
+      <a href={au}
+         target="_blank"
+         rel='noreferrer noopener'
+      >
+        angellist
       </a>
     </div>
   </div>
