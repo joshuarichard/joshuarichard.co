@@ -10,21 +10,27 @@
   justify-content: center;
   border-top: solid;
   border-bottom: solid;
-  border-color: #ffffff; }
+  border-color: #ffffff;
+}
 
 .resume-text {
-  margin: 1rem auto 1rem auto; }
+  margin: 1rem auto 1rem auto;
+}
 
 .github-text {
-  margin: 1rem auto 1rem auto; }
+  margin: 1rem auto 1rem auto;
+}
 
 .linkedin-text {
-  margin: 1rem auto 1rem auto; }
+  margin: 1rem auto 1rem auto;
+}
 
 a:link, a:visited {
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 a:hover, a:visited:hover {
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 /*# sourceMappingURL=Menu.css.map */

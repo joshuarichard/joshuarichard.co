@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../../css/components/box/content/Contact.css'
+import '../../../css/components/Contact.css'
 
 const Contact = () => (
   <div className='contact-container'>

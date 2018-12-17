@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../../css/components/box/content/Menu.css'
+import '../../../css/components/Menu.css'
 
 let ru = 'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf'
 let gu = 'https://github.com/joshuarichard'
@@ -10,6 +10,8 @@ const Menu = () => (
   <div className='menu-container'>
     <a className='resume-text'
        href={ru}
+       target="_blank"
+       rel='noreferrer noopener'
     >
       resume
     </a>

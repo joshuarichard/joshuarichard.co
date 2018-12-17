@@ -4,12 +4,14 @@
 .face-container {
   margin: 10px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+}
 
 .josh-face {
   border-radius: 50%;
   margin: auto;
   width: 20rem;
-  height: 20rem; }
+  height: 20rem;
+}
 
 /*# sourceMappingURL=Face.css.map */

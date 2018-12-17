@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,YAAY;AAIZ,WAAW;AACH,mEAA2D;ACHnE,kBAAmB;EACjB,MAAM,EAAE,IAAI",
-"sources": ["../../../../sass/partials/_variables.scss","../../../../sass/components/box/content/Content.scss"],
-"names": [],
-"file": "Content.css"
-}

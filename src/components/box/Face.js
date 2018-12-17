@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '../../css/components/box/Face.css'
+import '../../css/components/Face.css'
 
 let fu = 'https://s3.amazonaws.com/joshuarichard-site/joshuarichard.jpeg'
 

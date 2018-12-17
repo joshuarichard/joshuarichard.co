@@ -2,7 +2,7 @@ import React from 'react'
 import Face from './Face'
 import Content from './content/Content'
 
-import '../../css/components/box/Box.css'
+import '../../css/components/Box.css'
 
 const Box = () => (
   <div className='box-container'>

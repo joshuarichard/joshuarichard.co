@@ -3,7 +3,7 @@ import Menu from './Menu'
 import Contact from './Contact'
 import Joshua from './Joshua'
 
-import '../../../css/components/box/content/Content.css'
+import '../../../css/components/Content.css'
 
 const Content = () => (
   <div className='content-container'>
