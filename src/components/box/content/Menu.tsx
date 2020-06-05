@@ -9,6 +9,7 @@ let au = 'https://angel.co/joshuarichard';
 const Contain = styled.div`
   font-size: 2em;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   border: solid;
