@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-let ru = 'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf';
-let gu = 'https://github.com/joshuarichard';
-let lu = 'https://linkedin.com/in/joshuajrichard';
-let au = 'https://angel.co/joshuarichard';
+const ru = 'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf';
+const gu = 'https://github.com/joshuarichard';
+const lu = 'https://linkedin.com/in/joshuajrichard';
+const au = 'https://angel.co/joshuarichard';
+const bu = 'https://joshuarichard.bandcamp.com';
 
 const Contain = styled.div`
   font-size: 2em;
@@ -18,11 +19,11 @@ const Contain = styled.div`
 `;
 
 const ContainResume = styled.a`
-  margin: 1rem auto 1rem auto;
+  margin: 1rem 1rem 1rem 1rem;
 `;
 
 const ContainLink = styled.div`
-  margin: 1rem auto 1rem auto;
+  margin: 1rem 1rem 1rem 1rem;
 `;
 
 const Menu = () => (
@@ -56,6 +57,14 @@ const Menu = () => (
          rel='noreferrer noopener'
       >
         angellist
+      </a>
+    </ContainLink>
+    <ContainLink>
+      <a href={bu}
+         target="_blank"
+         rel='noreferrer noopener'
+      >
+        bandcamp
       </a>
     </ContainLink>
   </Contain>
