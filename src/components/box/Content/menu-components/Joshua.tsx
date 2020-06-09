@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Contain = styled.div`
   padding-bottom: 1em;
@@ -13,9 +13,7 @@ const Name = styled.text`
 
 const Joshua = () => (
   <Contain>
-    <Name>
-      joshua richard
-    </Name>
+    <Name>joshua richard</Name>
   </Contain>
 );
 
