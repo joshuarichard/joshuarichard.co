@@ -1,5 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+
+import { colors } from '../../../../styles';
 
 const Contain = styled.div`
   font-size: 2rem;
@@ -8,12 +10,14 @@ const Contain = styled.div`
   justify-content: center;
 `;
 
-const Contact = () => (
+const A = styled.a`
+  color: ${colors.secondary};
+`;
+
+export const Contact = () => (
   <Contain>
     <div>
-      <a href="mailto:me@joshuarichard.co">me@joshuarichard.co</a>
+      <A href="mailto:contact@joshuarichard.co">contact@joshuarichard.co</A>
     </div>
   </Contain>
 );
-
-export default Contact;

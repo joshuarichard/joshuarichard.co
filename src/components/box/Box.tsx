@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Content from "./Content";
+import React from 'react';
+import styled from 'styled-components';
+import Content from './Content';
 
 const Contain = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: auto;
   height: auto;
@@ -14,21 +13,15 @@ const Contain = styled.div`
 
 type Props = {
   showProjects: boolean;
-  toggleShowProjects: () => void;
+  setShowProjects: (show: boolean) => void;
 };
-type State = {};
-class Box extends Component<Props, State> {
-  render() {
-    const { showProjects, toggleShowProjects } = this.props;
-    return (
-      <Contain>
-        <Content
-          showProjects={showProjects}
-          toggleShowProjects={toggleShowProjects}
-        />
-      </Contain>
-    );
-  }
-}
+
+const Box = ({ showProjects, setShowProjects }: Props) => {
+  return (
+    <Contain>
+      <Content showProjects={showProjects} setShowProjects={setShowProjects} />
+    </Contain>
+  );
+};
 
 export default Box;

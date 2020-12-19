@@ -1,77 +1,64 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import ReactGA from "react-ga";
-import Box from "./box";
-import { createGlobalStyle } from "styled-components";
-import RobotoItalic from "../fonts/Roboto/Roboto-ThinItalic.ttf";
-import RobotoThin from "../fonts/Roboto/Roboto-Thin.ttf";
+import React, { useState, Suspense } from 'react';
+import styled from 'styled-components';
+import ReactGA from 'react-ga';
+import { createGlobalStyle } from 'styled-components';
+
+import RobotoLight from '../fonts/Roboto/Roboto-Light.ttf';
+import RobotoThin from '../fonts/Roboto/Roboto-Thin.ttf';
+
+import { colors } from '../styles';
+
+const Box = React.lazy(() => import('./box'));
 
 const GlobalStyle = createGlobalStyle<{ backgroundColor: string }>`
   body {
-    color: black;
+    color: ${colors.text.black};
     margin: 0;
     font-family: Roboto;
     background: ${(props) => props.backgroundColor};
   }
 
   @font-face {
-    font-family: RobotoItalic;
-    src: url(${RobotoItalic});
+    font-family: RobotoLight;
+    src: url(${RobotoLight});
+    font-display: swap;
   }
 
   @font-face {
     font-family: Roboto;
     src: url(${RobotoThin});
+    font-display: swap;
   }
 
   a, a:link, a:visited, a:active, a:visited:hover {
-    color: black !important;
     text-decoration: none;
   }
 
   a:hover {
-    text-decoration: overline;
+    text-decoration: underline;
   }
 `;
 
-ReactGA.initialize("UA-131070858-1");
-ReactGA.pageview("/home");
+ReactGA.initialize('UA-131070858-1');
+ReactGA.pageview('/home');
 
 const Contain = styled.div`
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
 `;
 
-type Props = {};
-type State = { showProjects: boolean };
-class App extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { showProjects: false };
-  }
+const App = () => {
+  const [showProjects, setShowProjects] = useState<boolean>(false);
 
-  render() {
-    const { showProjects } = this.state;
-    const toggleShowProjects = () =>
-      this.setState({ showProjects: !this.state.showProjects });
-
-    return (
-      <Contain>
-        <GlobalStyle
-          backgroundColor={
-            !showProjects
-              ? "linear-gradient(to right, #FFFFFF, #d2d2d2)"
-              : "linear-gradient(to right, #FFFFFF, #d2d2d2)"
-          }
-        />
-        <Box
-          showProjects={showProjects}
-          toggleShowProjects={toggleShowProjects}
-        />
-      </Contain>
-    );
-  }
-}
+  return (
+    <Contain>
+      <Suspense fallback={<div style={{ backgroundColor: colors.primary }} />}>
+        <GlobalStyle backgroundColor={colors.primary} />
+        <Box showProjects={showProjects} setShowProjects={setShowProjects} />
+      </Suspense>
+    </Contain>
+  );
+};
 
 export default App;

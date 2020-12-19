@@ -1,32 +1,34 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import { Menu, Contact, Joshua } from "./menu-components";
+import React from 'react';
+import styled from 'styled-components';
+import { Photo, Menu, Contact, Joshua } from './menu-components';
 
 const Contain = styled.div`
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 type Props = {
   showProjects: boolean;
-  toggleShowProjects: () => void;
+  setShowProjects: (show: boolean) => void;
 };
-type State = {};
-class Content extends Component<Props, State> {
-  render() {
-    const { showProjects, toggleShowProjects } = this.props;
-    return (
-      <Contain>
-        <Joshua />
-        <div>
-          <Menu
-            showProjects={showProjects}
-            toggleShowProjects={toggleShowProjects}
-          />
-          <Contact />
-        </div>
-      </Contain>
-    );
-  }
-}
+
+const Content = ({ showProjects, setShowProjects }: Props) => {
+  return (
+    <Contain>
+      <Photo />
+      <Joshua />
+      <div
+        style={{
+          width: '100%',
+        }}
+      >
+        <Menu showProjects={showProjects} setShowProjects={setShowProjects} />
+        <Contact />
+      </div>
+    </Contain>
+  );
+};
 
 export default Content;

@@ -1,46 +1,25 @@
-import React, { Component } from "react";
-import { MenuItem, MenuNav, MenuContain } from "../common";
+import React from 'react';
+import { MenuItem, MenuNav, MenuContain } from '../common';
 
-const ru =
-  "https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf";
-const gu = "https://github.com/joshuarichard";
-const lu = "https://linkedin.com/in/joshuajrichard";
-const au = "https://angel.co/joshuarichard";
+const ru = 'https://s3.amazonaws.com/joshuarichard-site/joshua_richard_resume.pdf';
+const gu = 'https://github.com/joshuarichard';
+const lu = 'https://linkedin.com/in/joshuajrichard';
+const au = 'https://angel.co/joshuarichard';
 
 type Props = {
-  toggleShowProjects: () => void;
+  setShowProjects: (show: boolean) => void;
 };
-type State = {};
 
-class DefaultMenuItems extends Component<Props, State> {
-  render() {
-    const { toggleShowProjects } = this.props;
-    return (
-      <MenuContain>
-        <MenuItem>
-          <a href={ru} target="_blank" rel="noreferrer noopener">
-            resume
-          </a>
-        </MenuItem>
-        <MenuItem>
-          <a href={gu} target="_blank" rel="noreferrer noopener">
-            github
-          </a>
-        </MenuItem>
-        <MenuItem>
-          <a href={lu} target="_blank" rel="noreferrer noopener">
-            linkedin
-          </a>
-        </MenuItem>
-        <MenuItem>
-          <a href={au} target="_blank" rel="noreferrer noopener">
-            angellist
-          </a>
-        </MenuItem>
-        <MenuNav onClick={toggleShowProjects}>projects</MenuNav>
-      </MenuContain>
-    );
-  }
-}
+const DefaultMenuItems = ({ setShowProjects }: Props) => {
+  return (
+    <MenuContain>
+      <MenuItem url={ru} displayText="resume" />
+      <MenuItem url={gu} displayText="github" />
+      <MenuItem url={lu} displayText="linkedin" />
+      <MenuItem url={au} displayText="angellist" />
+      <MenuNav onClick={() => setShowProjects(true)}>projects</MenuNav>
+    </MenuContain>
+  );
+};
 
 export default DefaultMenuItems;
