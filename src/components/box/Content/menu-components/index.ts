@@ -1,5 +1,4 @@
-import Menu from "./Menu";
-import Contact from "./Contact";
-import Joshua from "./Joshua";
-
-export { Menu, Contact, Joshua };
+export * from './Menu';
+export * from './Contact';
+export * from './Joshua';
+export * from './Photo';
