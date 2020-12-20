@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors } from '../../../../styles';
+import { colors } from '../../../styles';
 
 const Contain = styled.div`
   padding-bottom: 1em;
@@ -9,7 +9,7 @@ const Contain = styled.div`
 `;
 
 const Name = styled.text`
-  font-size: 6em;
+  font-size: 6rem;
   font-family: RobotoLight;
   color: ${colors.secondary};
 `;

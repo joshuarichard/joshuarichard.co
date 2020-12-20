@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors } from '../../../../../styles';
+import { colors } from '../../../../styles';
 
 const A = styled.a`
   color: ${colors.primary};

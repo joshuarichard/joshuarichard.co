@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Photo, Menu, Contact, Joshua } from './menu-components';
+import { Photo, Menu, Contact, Joshua } from './MenuComponents';
 
 const Contain = styled.div`
   margin: 10px;
@@ -14,21 +14,15 @@ type Props = {
   setShowProjects: (show: boolean) => void;
 };
 
-const Content = ({ showProjects, setShowProjects }: Props) => {
+const Home = ({ showProjects, setShowProjects }: Props) => {
   return (
     <Contain>
       <Photo />
       <Joshua />
-      <div
-        style={{
-          width: '100%',
-        }}
-      >
-        <Menu showProjects={showProjects} setShowProjects={setShowProjects} />
-        <Contact />
-      </div>
+      <Menu showProjects={showProjects} setShowProjects={setShowProjects} />
+      <Contact />
     </Contain>
   );
 };
 
-export default Content;
+export default Home;

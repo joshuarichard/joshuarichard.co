@@ -4,6 +4,6 @@ export const colors = {
     white: '#FFFFFF',
   },
   primary: '#EFE6DD',
-  secondary: '#1B1B1E', // rasin 272932
-  accent: '#000000', //'#650D1B', //381D2A
+  secondary: '#1B1B1E',
+  accent: '#0B7189', // '#A63D40', // '#FB3640', // '#436436', //C84C09
 };
