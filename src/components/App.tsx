@@ -8,9 +8,8 @@ import RobotoThin from '../fonts/Roboto/Roboto-Thin.ttf';
 import { colors } from '../styles';
 import InlineResume from './InlineResume';
 import { resume } from '../data';
-
-const Home = React.lazy(() => import('./Home'));
-const Box = React.lazy(() => import('./Box'));
+import Box from './Box';
+import Home from './Home';
 
 const GlobalStyle = createGlobalStyle<{ backgroundColor: string }>`
   body {
