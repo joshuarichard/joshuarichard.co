@@ -73,7 +73,7 @@ const HomeFooter = styled.div`
 
 const App = () => {
   const [showProjects, setShowProjects] = useState<boolean>(false);
-  const { skillsArr } = resume;
+  const { skills } = resume;
 
   return (
     <Contain>
@@ -87,7 +87,7 @@ const App = () => {
             content={<InlineResume.SummaryEducation fontColor={colors.primary} />}
           />
           <Box content={<InlineResume.SummaryNow />} />
-          {skillsArr.map((s, i) => (
+          {skills.map((s, i) => (
             <Box
               key={i}
               backgroundColor={
