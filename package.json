@@ -3,12 +3,6 @@
   "version": "1.1.0",
   "private": true,
   "dependencies": {
-    "@types/lodash": "^4.14.157",
-    "@types/node": "^14.0.11",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "@types/styled-components": "^5.1.0",
-    "@types/xml2js": "^0.4.5",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -20,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-and-run": "yarn build && python3 -m http.server --directory build/ 3000",
+    "build:run": "yarn build && python3 -m http.server --directory build/ 3000",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
@@ -35,6 +29,21 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.157",
+    "@types/node": "^14.0.11",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "@types/xml2js": "^0.4.5",
+    "react-scripts": "^4.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
     ]
   }
 }

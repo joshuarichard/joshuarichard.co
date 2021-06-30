@@ -1,3 +1,5 @@
 import { SummaryEducation, SummaryNow } from './Summaries';
 
-export default { SummaryEducation, SummaryNow };
+const Export = { SummaryEducation, SummaryNow };
+
+export default Export;
