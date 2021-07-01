@@ -13,5 +13,3 @@ export NODE_PATH=$NODE_PATH
 yarn
 
 yarn build
-
-cp -r build/ /var/www/html/
