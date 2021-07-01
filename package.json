@@ -14,7 +14,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:run": "yarn build && python3 -m http.server --directory build/ 3000",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && aws s3 sync build/ s3://joshuarichard-site"
