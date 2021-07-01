@@ -1,6 +1,7 @@
 #!/bin/bash
 
-set -euo pipefall
+set -euo pipefail
+cd "$(dirname "$0")/.."
 
 NODE_VERSION='12.14.1'
 export NVM_DIR="$HOME/.nvm"
