@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Jost', sans-serif;
     background: #0a0a0a;
     color: #e5e5e5;
     min-height: 100vh;
