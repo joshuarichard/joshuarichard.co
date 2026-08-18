@@ -19,11 +19,21 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     height: 100%;
     background: ${BLACK};
+
+    @media (max-width: 768px) {
+      overflow: auto;
+      height: auto;
+    }
   }
 
   #root {
     height: 100vh;
     overflow: hidden;
+
+    @media (max-width: 768px) {
+      height: auto;
+      overflow: visible;
+    }
   }
 `;
 
@@ -32,6 +42,11 @@ const Viewport = styled.div`
   height: 100vh;
   overflow: hidden;
   background: ${BLACK};
+
+  @media (max-width: 768px) {
+    height: auto;
+    overflow: visible;
+  }
 `;
 
 const ScrollTrack = styled.div`
@@ -46,10 +61,21 @@ const ScrollTrack = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    overflow: visible;
+  }
 `;
 
 const Panel = styled.div`
   flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    flex-shrink: 1;
+  }
 `;
 
 // ── Nav Dots ──
@@ -62,12 +88,16 @@ const DotsContainer = styled.div`
   display: flex;
   gap: 10px;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Dot = styled.div<{ $active: boolean }>`
   width: ${(p) => (p.$active ? "28px" : "8px")};
   height: 8px;
-  background: ${(p) => (p.$active ? GREEN : "rgba(244,241,236,0.3)")};
+  background: ${(p) => (p.$active ? RED : "rgba(244,241,236,0.3)")};
   transition: all 0.3s ease;
 `;
 
@@ -86,11 +116,17 @@ function NavDots({ count, active }: { count: number; active: number }) {
 const HeroContainer = styled(Panel)`
   width: 100vw;
   height: 100vh;
-  background: ${BLACK};
+  background: ${CREAM};
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
 `;
 
 const HeroLeft = styled.div`
@@ -98,7 +134,13 @@ const HeroLeft = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 52px 48px 52px 64px;
-  border-right: 3px solid rgba(244, 241, 236, 0.1);
+  border-right: 3px solid rgba(17, 17, 17, 0.1);
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+    border-right: none;
+    gap: 40px;
+  }
 `;
 
 const HeroTagline = styled.div`
@@ -110,7 +152,7 @@ const HeroTagline = styled.div`
 const RedSquare = styled.div`
   width: 32px;
   height: 32px;
-  background: ${RED};
+  background: ${BLUE};
 `;
 
 const TaglineText = styled.span`
@@ -118,7 +160,7 @@ const TaglineText = styled.span`
   font-weight: 600;
   letter-spacing: 0.18em;
   font-size: 11px;
-  color: rgba(244, 241, 236, 0.45);
+  color: rgba(17, 17, 17, 0.45);
   text-transform: uppercase;
 `;
 
@@ -126,16 +168,21 @@ const HeroName = styled.h1`
   font-family: "Staatliches", sans-serif;
   font-size: clamp(88px, 10vw, 148px);
   line-height: 0.88;
-  color: ${WHITE};
+  color: ${BLACK};
   margin: 0 0 28px 0;
   letter-spacing: 0.01em;
+
+  @media (max-width: 768px) {
+    font-size: 64px;
+    margin: 0 0 20px 0;
+  }
 `;
 
 const HeroBio = styled.p`
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   font-size: 14px;
-  color: rgba(244, 241, 236, 0.5);
+  color: rgba(17, 17, 17, 0.5);
   line-height: 1.7;
   max-width: 320px;
   margin: 0;
@@ -152,16 +199,20 @@ const HeroLink = styled.a<{ $highlight?: boolean }>`
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: ${(p) => (p.$highlight ? GREEN : "rgba(244,241,236,0.4)")};
+  color: ${(p) => (p.$highlight ? RED : "rgba(17,17,17,0.4)")};
   text-decoration: none;
   border-bottom: 1px solid
-    ${(p) => (p.$highlight ? GREEN : "rgba(244,241,236,0.2)")};
+    ${(p) => (p.$highlight ? RED : "rgba(17,17,17,0.2)")};
   padding-bottom: 2px;
 `;
 
 const HeroRight = styled.div`
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0 24px 40px;
+  }
 `;
 
 const GeoCircle = styled.div`
@@ -173,6 +224,10 @@ const GeoCircle = styled.div`
   height: 500px;
   border-radius: 50%;
   background: ${BLUE};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const GeoRedBar = styled.div`
@@ -182,6 +237,10 @@ const GeoRedBar = styled.div`
   width: 110px;
   height: 280px;
   background: ${RED};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const GeoYellowBox = styled.div`
@@ -191,6 +250,10 @@ const GeoYellowBox = styled.div`
   width: 130px;
   height: 130px;
   background: ${GREEN};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const GeoLine = styled.div`
@@ -199,17 +262,25 @@ const GeoLine = styled.div`
   top: 50%;
   width: 55%;
   height: 3px;
-  background: ${WHITE};
+  background: ${BLACK};
   opacity: 0.15;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const GeoGrid = styled.div`
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(244, 241, 236, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244, 241, 236, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const HeroTechStack = styled.div`
@@ -218,6 +289,11 @@ const HeroTechStack = styled.div`
   left: 40px;
   width: 55%;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    position: static;
+    width: 100%;
+  }
 `;
 
 const HeroTechLabel = styled.div`
@@ -226,12 +302,12 @@ const HeroTechLabel = styled.div`
   font-size: 11px;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(244, 241, 236, 0.35);
+  color: rgba(17, 17, 17, 0.35);
   margin-bottom: 14px;
 `;
 
 const HeroTechGroup = styled.div`
-  border-top: 1px solid rgba(244, 241, 236, 0.1);
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
   padding-top: 10px;
   margin-bottom: 10px;
 
@@ -245,7 +321,7 @@ const HeroTechGroupLabel = styled.div`
   font-size: 10px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(244, 241, 236, 0.3);
+  color: rgba(17, 17, 17, 0.3);
   margin-bottom: 4px;
 `;
 
@@ -253,7 +329,7 @@ const HeroTechGroupItems = styled.div`
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   font-size: 13px;
-  color: rgba(244, 241, 236, 0.7);
+  color: rgba(17, 17, 17, 0.7);
   line-height: 1.6;
 `;
 
@@ -263,6 +339,8 @@ function HeroPanel() {
       <HeroLeft>
         <HeroTagline>
           <RedSquare />
+          <RedSquare style={{ background: GREEN }} />
+          <RedSquare style={{ background: RED }} />
           <TaglineText>
             Engineering Team Lead &middot; 10 Yrs Experience
           </TaglineText>
@@ -323,7 +401,7 @@ const projects = [
     key: "portfolio",
     title: "JOSHUARICHARD.CO",
     year: "2026",
-    accent: RED,
+    accent: BLUE,
     url: "https://github.com/joshuarichard/joshuarichard.co",
     desc: "This portfolio — a Bauhaus-themed horizontally-scrolling site built with React, Vite, and styled-components.",
     tags: ["React", "TypeScript", "Vite", "styled-components"],
@@ -341,7 +419,7 @@ const projects = [
     key: "music",
     title: "MUSIC TIMELINE",
     year: "2023",
-    accent: BLUE,
+    accent: RED,
     url: "https://github.com/joshuarichard/music-timeline",
     desc: "Personal music timeline tracking favorite records across the years. Data persisted in Airtable, deployed as a static site on AWS S3.",
     tags: ["TypeScript", "Airtable", "AWS S3"],
@@ -350,7 +428,7 @@ const projects = [
     key: "gybote",
     title: "GYBOTE",
     year: "2022",
-    accent: RED,
+    accent: BLUE,
     url: "https://github.com/joshuarichard/gybote",
     desc: "Twitter bot that posts Godspeed You! Black Emperor lyrics on a configurable interval. Supports custom lyric dictionaries.",
     tags: ["Python", "Tweepy", "Twitter API"],
@@ -364,6 +442,13 @@ const ProjectsContainer = styled(Panel)`
   display: grid;
   grid-template-columns: 56px 1fr;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+    height: auto;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
 `;
 
 const SectionStrip = styled.div<{ $bg: string; $color: string }>`
@@ -371,6 +456,11 @@ const SectionStrip = styled.div<{ $bg: string; $color: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    padding: 16px 24px;
+    justify-content: flex-start;
+  }
 `;
 
 const StripLabel = styled.span<{ $color: string }>`
@@ -380,12 +470,23 @@ const StripLabel = styled.span<{ $color: string }>`
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   letter-spacing: 0.1em;
+
+  @media (max-width: 768px) {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
 `;
 
 const ProjectsContent = styled.div`
   padding: 56px 64px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+    min-width: 0;
+    overflow: hidden;
+  }
 `;
 
 const ProjectsHeader = styled.div`
@@ -395,6 +496,11 @@ const ProjectsHeader = styled.div`
   border-bottom: 1px solid rgba(244, 241, 236, 0.1);
   padding-bottom: 20px;
   margin-bottom: 32px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -403,6 +509,10 @@ const SectionTitle = styled.h2`
   color: ${WHITE};
   margin: 0;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const GithubLink = styled.a`
@@ -419,6 +529,11 @@ const ProjectsGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   flex: 1;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 `;
 
 const ProjectCard = styled.div<{ $accent: string; $hovered: boolean }>`
@@ -434,11 +549,26 @@ const ProjectCard = styled.div<{ $accent: string; $hovered: boolean }>`
     border-color 0.25s;
   cursor: pointer;
   min-height: 340px;
+  min-width: 0;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 24px;
+  }
 `;
 
-function hoverFg() {
-  return WHITE;
-}
+const ProjectCardTitle = styled.h3`
+  font-family: "Staatliches", sans-serif;
+  font-size: 48px;
+  color: ${WHITE};
+  margin: 0 0 12px 0;
+  line-height: 1;
+  transition: color 0.25s;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+`;
 
 function hoverMuted(hovered: boolean) {
   return hovered ? "rgba(244,241,236,0.8)" : "rgba(244,241,236,0.5)";
@@ -453,8 +583,8 @@ function ProjectsPanel() {
 
   return (
     <ProjectsContainer>
-      <SectionStrip $bg={RED} $color={WHITE}>
-        <StripLabel $color={WHITE}>01 — PROJECTS</StripLabel>
+      <SectionStrip $bg={GREEN} $color={WHITE}>
+        <StripLabel $color={WHITE}>02 — PROJECTS</StripLabel>
       </SectionStrip>
 
       <ProjectsContent>
@@ -478,7 +608,7 @@ function ProjectsPanel() {
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
+                style={{ textDecoration: "none", minWidth: 0, overflow: "hidden" }}
                 onMouseEnter={() => setHovered(p.key)}
                 onMouseLeave={() => setHovered(null)}
               >
@@ -511,18 +641,7 @@ function ProjectsPanel() {
                         {p.year}
                       </span>
                     </div>
-                    <h3
-                      style={{
-                        fontFamily: "'Staatliches', sans-serif",
-                        fontSize: 48,
-                        color: hoverFg(),
-                        margin: "0 0 12px 0",
-                        lineHeight: 1,
-                        transition: "color 0.25s",
-                      }}
-                    >
-                      {p.title}
-                    </h3>
+                    <ProjectCardTitle>{p.title}</ProjectCardTitle>
                     <p
                       style={{
                         fontFamily: "'Barlow', sans-serif",
@@ -592,7 +711,7 @@ const jobs = [
     title: "Engineering Team Lead",
     period: "Feb 2021 – Jul 2026",
     location: "Somerville, MA",
-    accent: RED,
+    accent: BLUE,
     bullets: [
       "People lead for 2 full-stack engineering teams (5–10 engineers)",
       "Hired 7 FTEs and 2 interns",
@@ -617,7 +736,7 @@ const jobs = [
     title: "Lead Software Engineer",
     period: "Feb 2017 – Feb 2020",
     location: "Concord, MA",
-    accent: BLUE,
+    accent: RED,
     bullets: [
       "Rebuilt the Product Search API to increase performance, scalability, and reduce cost",
       "Managed customer relationships across all technical engagements",
@@ -628,7 +747,7 @@ const jobs = [
     title: "Software Developer Intern",
     period: "Jun – Dec 2015",
     location: "Boston, MA",
-    accent: RED,
+    accent: BLUE,
     bullets: [
       "Built a portal and dashboard providing technical and financial insights into IBM Cloud offerings",
     ],
@@ -658,6 +777,12 @@ const ExperienceContainer = styled(Panel)`
   display: grid;
   grid-template-columns: 56px 1.2fr 0.8fr;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: auto;
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
 `;
 
 const WorkColumn = styled.div`
@@ -666,6 +791,12 @@ const WorkColumn = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+    border-right: none;
+    overflow: visible;
+  }
 `;
 
 const EducationColumn = styled.div`
@@ -673,6 +804,11 @@ const EducationColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 0 24px 40px;
+    gap: 32px;
+  }
 `;
 
 const WorkTitle = styled.h2`
@@ -681,6 +817,10 @@ const WorkTitle = styled.h2`
   color: ${BLACK};
   margin: 0 0 24px 0;
   line-height: 0.95;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const JobRow = styled.div<{ $last: boolean }>`
@@ -757,16 +897,12 @@ const BulletText = styled.span`
 function ExperiencePanel() {
   return (
     <ExperienceContainer>
-      <SectionStrip $bg={GREEN} $color={BLACK}>
-        <StripLabel $color={BLACK}>02 — EXPERIENCE</StripLabel>
+      <SectionStrip $bg={BLUE} $color={WHITE}>
+        <StripLabel $color={WHITE}>01 — EXPERIENCE</StripLabel>
       </SectionStrip>
 
       <WorkColumn>
-        <WorkTitle>
-          WORK
-          <br />
-          HISTORY
-        </WorkTitle>
+        <WorkTitle>WORK HISTORY</WorkTitle>
 
         {jobs.map((j, i) => (
           <JobRow key={i} $last={i === jobs.length - 1}>
@@ -809,7 +945,7 @@ function ExperiencePanel() {
       <EducationColumn>
         <div>
           <WorkTitle>EDUCATION</WorkTitle>
-          <div style={{ borderTop: `2px solid ${BLACK}`, paddingTop: 20 }}>
+          <div>
             <span
               style={{
                 fontFamily: "'Staatliches', sans-serif",
@@ -847,9 +983,9 @@ function ExperiencePanel() {
         </div>
 
         <div style={{ display: "flex", gap: 12, alignItems: "flex-end" }}>
-          <div style={{ width: 64, height: 64, background: RED }} />
           <div style={{ width: 64, height: 64, background: BLUE }} />
           <div style={{ width: 64, height: 64, background: GREEN }} />
+          <div style={{ width: 64, height: 64, background: RED }} />
         </div>
       </EducationColumn>
     </ExperienceContainer>
@@ -889,6 +1025,11 @@ const ContactContainer = styled(Panel)`
   grid-template-columns: 56px 1fr;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 768px) {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ContactContent = styled.div`
@@ -898,6 +1039,10 @@ const ContactContent = styled.div`
   justify-content: space-between;
   position: relative;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+  }
 `;
 
 const ContactTitle = styled.h2`
@@ -906,6 +1051,11 @@ const ContactTitle = styled.h2`
   color: ${WHITE};
   line-height: 0.88;
   margin: 0 0 56px 0;
+
+  @media (max-width: 768px) {
+    font-size: 56px;
+    margin: 0 0 32px 0;
+  }
 `;
 
 const ContactRow = styled.a<{ $first: boolean; $last: boolean }>`
@@ -921,6 +1071,12 @@ const ContactRow = styled.a<{ $first: boolean; $last: boolean }>`
   border-bottom: ${(p) =>
     p.$last ? "2px solid rgba(244,241,236,0.3)" : "none"};
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px 0;
+  }
 `;
 
 const ContactLabel = styled.span`
@@ -936,6 +1092,10 @@ const ContactValue = styled.span`
   font-size: 32px;
   color: ${WHITE};
   letter-spacing: 0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const Copyright = styled.div`
@@ -945,31 +1105,12 @@ const Copyright = styled.div`
   letter-spacing: 0.08em;
 `;
 
-const ContactCircle = styled.div`
-  position: absolute;
-  right: -120px;
-  bottom: -120px;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  border: 80px solid rgba(244, 241, 236, 0.05);
-  pointer-events: none;
-`;
 
-const ContactSquare = styled.div`
-  position: absolute;
-  right: 80px;
-  top: 60px;
-  width: 160px;
-  height: 160px;
-  background: rgba(214, 40, 40, 0.18);
-  pointer-events: none;
-`;
 
 function ContactPanel() {
   return (
     <ContactContainer>
-      <SectionStrip $bg={BLACK} $color={WHITE}>
+      <SectionStrip $bg={RED} $color={WHITE}>
         <StripLabel $color={WHITE}>03 — CONTACT</StripLabel>
       </SectionStrip>
 
@@ -1001,8 +1142,6 @@ function ContactPanel() {
         <Copyright>&copy; 2026 Joshua Richard</Copyright>
       </ContactContent>
 
-      <ContactCircle />
-      <ContactSquare />
     </ContactContainer>
   );
 }
@@ -1028,7 +1167,9 @@ export default function App() {
   useEffect(() => {
     const el = trackRef.current;
     if (!el) return;
+    const mq = window.matchMedia("(max-width: 768px)");
     const onWheel = (e: WheelEvent) => {
+      if (mq.matches) return;
       e.preventDefault();
       el.scrollLeft += e.deltaY + e.deltaX;
     };
@@ -1042,8 +1183,8 @@ export default function App() {
       <Viewport>
         <ScrollTrack ref={trackRef}>
           <HeroPanel />
-          <ProjectsPanel />
           <ExperiencePanel />
+          <ProjectsPanel />
           <ContactPanel />
         </ScrollTrack>
         <NavDots count={4} active={activePanel} />
