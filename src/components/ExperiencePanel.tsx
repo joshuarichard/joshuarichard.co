@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLUE, GREEN, RED, BLACK, WHITE, CREAM } from "../theme/colors";
+import { BLUE, GREEN, RED, BLACK, WHITE } from "../theme/colors";
 import { Panel } from "./common/Layout";
 import { SectionStrip, StripLabel } from "./common/SectionStrip";
 import { jobs } from "../data/jobs";
@@ -8,7 +8,7 @@ import gordonLogo from "../assets/gordon_college_logo.png";
 const Container = styled(Panel)`
   width: 100vw;
   height: 100vh;
-  background: ${CREAM};
+  background: ${WHITE};
   display: grid;
   grid-template-columns: 56px 1.2fr 0.8fr;
   overflow: hidden;

@@ -1,4 +1,4 @@
-export const RED = "#ED1C24";
+export const RED = "#DA121A";
 export const GREEN = "#009B4D";
 export const BLUE = "#003DA5";
 export const BLACK = "#111111";

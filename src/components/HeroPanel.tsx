@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLUE, GREEN, RED, BLACK, CREAM } from "../theme/colors";
+import { BLUE, GREEN, RED, BLACK, WHITE } from "../theme/colors";
 import { Panel } from "./common/Layout";
 import { techGroups } from "../data/techGroups";
 import resumePdf from "../assets/joshua_richard_resume_2025.pdf";
@@ -7,7 +7,7 @@ import resumePdf from "../assets/joshua_richard_resume_2025.pdf";
 const Container = styled(Panel)`
   width: 100vw;
   height: 100vh;
-  background: ${CREAM};
+  background: ${WHITE};
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
