@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { BLUE, GREEN, RED, BLACK, CREAM } from "../theme/colors";
 import { Panel } from "./common/Layout";
 import { techGroups } from "../data/techGroups";
+import resumePdf from "../assets/joshua_richard_resume_2025.pdf";
 
 const Container = styled(Panel)`
   width: 100vw;
@@ -246,6 +247,9 @@ export function HeroPanel() {
           </Link>
           <Link href="mailto:jobs@joshuarichard.co">
             jobs@joshuarichard.co
+          </Link>
+          <Link href={resumePdf} target="_blank" rel="noopener noreferrer">
+            Resume
           </Link>
         </Links>
       </Left>
